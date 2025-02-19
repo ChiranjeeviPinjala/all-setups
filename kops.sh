@@ -11,5 +11,5 @@ mv kops-linux-amd64 /usr/local/bin/kops
 aws s3api create-bucket --bucket unqbcktnm --region us-east-1
 aws s3api put-bucket-versioning --bucket unqbcktnm --region us-east-1 --versioning-configuration Status=Enabled
 export KOPS_STATE_STORE=s3://unqbcktnm
-kops create cluster --name clustnm.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.medium
-kops update cluster --name clustnm.k8s.local --yes --admin
+kops create cluster --name clustername.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --master-volume-size 27 --node-count=2 --node-volume-size 25 --node-size t2.micro
+kops update cluster --name clustername.k8s.local --yes --admin
