@@ -3,3 +3,8 @@ ls /usr/local/bin/
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose version
+
+# If you get any error then run below command
+
+sudo dnf install libxcrypt-compat
+
